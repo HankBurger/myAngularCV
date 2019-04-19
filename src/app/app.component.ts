@@ -24,8 +24,12 @@ export class AppComponent {
   };
 
   rItems() {
-    const item: string[] = ['action1', 'action2', 'action3'];
-    item.push(this.user.cards[0].title);
+    const item: string[] = ['action1', 'action2'];
+
+    for (const card of this.user.cards) {
+      item.push(card.title);
+    }
+
     return item;
   }
 }
