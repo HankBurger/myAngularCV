@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './module/user';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cv';
+  user: User = {
+    name: 'name',
+    career: 'career',
+    description: 'description',
+    photo: './assets/icon.jpeg'
+  };
+  items: string[] = ['action1', 'action2', 'action3'];
 }

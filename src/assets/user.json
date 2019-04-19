@@ -1,0 +1,21 @@
+{
+    "name": "",
+    "info": [
+        {
+            "name": "phone",
+            "value": "123546789"
+        },
+        {
+            "name": "e-mail",
+            "value": "abc@mail.com"
+        }
+    ],
+    "career": "",
+    "description": "",
+    "cards": [
+        {
+            "title": "skill",
+            "content": ""
+        }
+    ]
+}
