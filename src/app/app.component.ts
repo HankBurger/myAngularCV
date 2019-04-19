@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { User } from './module/user';
+import { User, ModelType } from './module';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,20 @@ export class AppComponent {
     name: 'name',
     career: 'career',
     description: 'description',
-    photo: './assets/icon.jpeg'
+    photo: './assets/icon.jpeg',
+    cards:
+      [
+        {
+          model: ModelType.timeline,
+          title: 'skill',
+          content: 'Hello world'
+        }
+      ]
   };
-  items: string[] = ['action1', 'action2', 'action3'];
+
+  rItems() {
+    const item: string[] = ['action1', 'action2', 'action3'];
+    item.push(this.user.cards[0].title);
+    return item;
+  }
 }
