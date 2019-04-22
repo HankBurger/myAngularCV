@@ -12,11 +12,12 @@ export class CvComponent implements OnInit {
   user: User;
   item: string[];
   constructor(private userService: UserServiceService) {
-    this.user = userService.user;
-    this.item = userService.rItems();
+
   }
 
   ngOnInit() {
+    this.user = this.userService.user;
+    this.item = this.userService.rItems();
   }
 
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { TimeLine } from 'src/app/module';
 
 @Component({
   selector: 'app-time-line',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class TimeLineComponent implements OnInit {
 
   constructor() { }
-
+  @Input() tlAry: TimeLine;
   ngOnInit() {
   }
 

@@ -2,32 +2,12 @@
   <div class="row">
     <div class="col-md-9 offset-md-1">
       <ul class="timeline">
-        <li>
+        <li *ngFor="let obj of tlAry">
           <div class="d-flex">
-            <div class="p-2 font-weight-bold text-primary">New Web Design</div>
-            <div class="p-2 font-italic text-secondary">Now - 2014 April</div>
+            <div class="p-2 font-weight-bold text-primary">{{obj.title}}</div>
+            <div class="p-2 font-italic text-secondary">{{obj.subTitle}}</div>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et
-            elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....
-          </p>
-        </li>
-
-        <li>
-          <div class="d-flex">
-            <div class="p-2 font-weight-bold text-primary">21 000 Job Seekers</div>
-            <div class="p-2 font-italic text-secondary">2014 April - 2014 March</div>
-          </div>
-          <p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo
-            accumsan, sed semper nisi sollicitudin...</p>
-        </li>
-
-        <li>
-          <div class="d-flex">
-            <div class="p-2 font-weight-bold text-primary">Awesome Employers</div>
-            <div class="p-2 font-italic text-secondary">2014 March - 2013 April</div>
-          </div>
-          <p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae,
-            mollis pharetra velit. Sed nec tempor nibh...</p>
+          <p>{{obj.content}}</p>
         </li>
       </ul>
     </div>

@@ -1,7 +1,7 @@
 import { ModelType } from './ModelType';
 
-export class Card {
+export interface Card {
     model: ModelType;
     title: string;
-    content: string;
+    content: any;
 }
