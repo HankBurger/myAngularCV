@@ -1,0 +1,27 @@
+<app-jumbotron [user]="user"></app-jumbotron>
+<app-navbar [items]="item"></app-navbar>
+<app-block id="action1">
+    <block-header>Test456</block-header>
+    <block-body>
+        <app-my-card>
+            <card-body>
+                <p>...</p>
+                <p>...</p>
+            </card-body>
+        </app-my-card>
+    </block-body>
+</app-block>
+<app-block id="action2">
+    <block-header>Test123</block-header>
+    <block-body>
+        <app-time-line></app-time-line>
+    </block-body>
+</app-block>
+<app-block *ngFor="let card of user.cards;" [attr.id]="card.title">
+    <block-header>{{card.title}}</block-header>
+    <block-body>
+        <app-my-card>
+            <card-body>{{card.content}}</card-body>
+        </app-my-card>
+    </block-body>
+</app-block>

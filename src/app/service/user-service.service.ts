@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { User, ModelType } from '../module';
 
 // @Injectable({
 // providedIn: 'root'
@@ -9,5 +10,28 @@ export class UserServiceService {
 
   constructor() { }
 
-  getItems() { return ['action1', 'action2', 'action3']; }
+  user: User = {
+    name: 'name',
+    career: 'career',
+    description: 'description',
+    photo: './assets/icon.jpeg',
+    cards:
+      [
+        {
+          model: ModelType.timeline,
+          title: 'skill',
+          content: 'Hello world'
+        }
+      ]
+  };
+
+  rItems() {
+    const item: string[] = ['action1', 'action2'];
+
+    for (const card of this.user.cards) {
+      item.push(card.title);
+    }
+
+    return item;
+  }
 }
