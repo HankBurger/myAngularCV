@@ -5,3 +5,8 @@ export interface Card {
     title: string;
     content: any;
 }
+export interface CardContent {
+    title?: string;
+    colSize?: number;
+    content: string;
+}

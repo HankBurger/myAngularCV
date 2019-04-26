@@ -8,6 +8,7 @@ import { BlockComponent, MyCardComponent, TimeLineComponent } from './block';
 import { CvComponent } from './cv.component';
 
 import { UserServiceService } from '../service/user-service.service';
+import { MyCommonPipe } from '../my-common-pipe.pipe';
 @NgModule({
   imports: [
     CommonModule
@@ -18,7 +19,8 @@ import { UserServiceService } from '../service/user-service.service';
     MyCardComponent,
     TimeLineComponent,
     BlockComponent,
-    CvComponent
+    CvComponent,
+    MyCommonPipe
   ],
   exports: [
     CvComponent

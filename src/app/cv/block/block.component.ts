@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Card, ModelType, TimeLine } from 'src/app/module';
+import { Card, ModelType, TimeLine, CardContent } from 'src/app/module';
 
 @Component({
   selector: 'app-block',
@@ -17,5 +17,9 @@ export class BlockComponent implements OnInit {
 
   getTimeLine(): TimeLine[] {
     return this.cardInfo.content as TimeLine[];
+  }
+
+  getCard(): CardContent[] {
+    return this.cardInfo.content as CardContent[];
   }
 }

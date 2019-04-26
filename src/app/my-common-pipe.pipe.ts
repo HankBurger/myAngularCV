@@ -1,0 +1,13 @@
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'myCommonPipe'
+})
+export class MyCommonPipe implements PipeTransform {
+
+  transform(value: string, args?: string[]): string {
+    if (!value) { return value; }
+    return value.replace(/\n/g, '<br/>');
+  }
+
+}
