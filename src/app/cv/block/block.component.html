@@ -1,4 +1,4 @@
-<h4 class="text-center"> {{cardInfo.title}}</h4>
+<h3 class="text-center"> {{cardInfo.title}}</h3>
 <div [ngSwitch]="cardInfo.model">
   <app-my-card *ngSwitchCase="ModelType.card" [cardContent]="getCard()"></app-my-card>
   <app-time-line *ngSwitchCase="ModelType.timeline" [tlAry]="getTimeLine()"></app-time-line>

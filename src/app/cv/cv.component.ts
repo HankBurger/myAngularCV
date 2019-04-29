@@ -16,8 +16,19 @@ export class CvComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.user = this.userService.user;
-    this.item = this.userService.rItems();
+    this.getUser();
+    this.setItems();
   }
 
+  getUser(): void {
+    this.userService.getUser().subscribe(user => this.user = user);
+  }
+
+  setItems(): void {
+    this.item = [];
+
+    for (const card of this.user.cards) {
+      this.item.push(card.title);
+    }
+  }
 }
